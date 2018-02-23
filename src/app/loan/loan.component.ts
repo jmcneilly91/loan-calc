@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Loan } from './loan';
+import { LoanService } from './loan.service';
 
 @Component({
   selector: 'app-loan',
@@ -8,20 +9,15 @@ import { Loan } from './loan';
   styleUrls: ['./loan.component.css']
 })
 export class LoanComponent implements OnInit {
-  loan: Loan = {
-    id: 1,
-    name: 'Sallie Mae',
+  loans: Loan[];
 
-    principal: 12000,
-    rate: .035,
-    repaymentPeriod: 72,
-    subsidized: false
-  }
-
-
-  constructor() { }
+  constructor(private loanService: LoanService) { }
 
   ngOnInit() {
+    this.getLoans();
   }
 
+  getLoans(): void {
+    this.loans = this.loanService.getLoans();
+  }
 }

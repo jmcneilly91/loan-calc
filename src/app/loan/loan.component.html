@@ -1,10 +1,15 @@
-
+<h3>All Loans</h3>
+<ol class="loans">
+  <li *ngFor="let loan of loans">
+    <h3>{{loan.name}}</h3>
+    <p>Principal: {{loan.principal}}</p>
+    <p>Interest Rate: {{loan.rate}}</p>
+    <p>Repayment Period in Months: {{loan.repaymentPeriod}}</p>
+    <p>Subsidized: {{loan.subsidized}}</p>
+  </li>
+</ol>
 
 <div>
-    <h3>{{loan.id}} : {{loan.name}}</h3>
-  Loan details:
-  <p>Principal: {{loan.principal}}</p>
-  <p>Interest Rate: {{loan.rate}}</p>
-  <p>Repayment Period in Months: {{loan.repaymentPeriod}}</p>
-  <p>Subsidized: {{loan.subsidized}}</p>
+  test
+  {{getMonthlyPayment(loan)}}
 </div>
