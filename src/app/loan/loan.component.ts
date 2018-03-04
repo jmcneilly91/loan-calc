@@ -20,4 +20,8 @@ export class LoanComponent implements OnInit {
   getLoans(): void {
     this.loans = this.loanService.getLoans();
   }
+
+  addLoan(loan: Loan): void {
+    this.loans.push(loan);
+  }
 }
