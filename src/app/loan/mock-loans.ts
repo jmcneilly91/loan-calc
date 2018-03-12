@@ -7,7 +7,7 @@ export const LOANS: Loan[] = [
         principal: 10000,
         rate: .025,
         repaymentPeriod: 72,
-        subsidized: false
+        isSubsidized: false
      },
      { 
         id: 2,
@@ -15,6 +15,6 @@ export const LOANS: Loan[] = [
         principal: 8000,
         rate: .063,
         repaymentPeriod: 120,
-        subsidized: true
+        isSubsidized: true
      }
 ];
