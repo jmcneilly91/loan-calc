@@ -10,6 +10,7 @@ import { LoanService } from './loan.service';
 })
 export class LoanComponent implements OnInit {
   loans: Loan[];
+  loan = new Loan(0, "temp", 0, 0, 0, false);
 
   constructor(private loanService: LoanService) { }
 
@@ -21,7 +22,16 @@ export class LoanComponent implements OnInit {
     this.loans = this.loanService.getLoans();
   }
 
-  addLoan(loan: Loan): void {
+  addLoan(input: Loan): void {
+    let loan = new Loan(
+      // TODO: How to get an appropriate id value?
+      0,
+      input.name,
+      input.principal,
+      input.rate,
+      input.repaymentPeriod,
+      input.isSubsidized
+    );
     this.loans.push(loan);
   }
 }
