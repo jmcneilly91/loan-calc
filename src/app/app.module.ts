@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoanComponent } from './loan/loan.component';
 import { LoanService } from './loan/loan.service';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 const routes: Routes = [
   { path: 'loans', component: LoanComponent, },
