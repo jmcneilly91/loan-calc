@@ -1,0 +1,16 @@
+h4 {
+    text-align: center;
+    position: relative;
+}
+
+.loan-element {
+    width: 25%;
+    position: relative;
+    background-color: slategray;
+    color: white;
+}
+
+.loan-element:hover {
+    background-color: lightgray;
+    color: black;
+}
